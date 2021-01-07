@@ -31,4 +31,5 @@ def images():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # running app
+    app.run(threaded=True)

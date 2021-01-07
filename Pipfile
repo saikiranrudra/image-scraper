@@ -8,6 +8,7 @@ flask = "*"
 flask-cors = "*"
 selenium = "*"
 requests = "*"
+gunicorn = "*"
 
 [dev-packages]
 
