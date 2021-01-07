@@ -1,0 +1,40 @@
+{% include "header.html" %}
+<body>
+    <h1 class="display-1" style="text-align: center; color: var(--bs-white)">Scrapped Image</h1>
+    <div class="container">
+        <div class="row col-sm">
+            {% for url in urls %}
+                <div class="card" style="width: 18rem; margin: .8rem">
+                    <img src={{ url }} alt="image" class="card-img-top">
+                    <div class="card-body" style="align-self: center;">
+                        <a href={{url}} class="btn btn-primary SRC" download={{ url }}>Download Image</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div style="text-align: center; background-color: var(--bs-white); padding: .4rem;">
+        <h1 class="btn btn-primary"; style="margin: 0;" onclick="downlaodAll()">Download ALL</h1>
+    </div>
+
+    <script>
+        srcs = null
+        window.onload = function() {
+            srcs = document.querySelectorAll(".SRC");
+        }
+
+        const downlaodAll = () => {
+            srcs.forEach((url, index) => {
+                const a = document.createElement("a");
+                document.body.appendChild(a);
+                a.href = url.download;
+                a.setAttribute("download", `${index}`);
+                a.click();
+                window.URL.revokeObjectURL(a.href);
+                document.body.removeChild(a);
+            })
+        }
+    </script>
+</body>
+{% include "footer.html"%}

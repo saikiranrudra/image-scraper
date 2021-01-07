@@ -1,0 +1,32 @@
+{% include "header.html" %}
+<div style="
+    display: grid;
+    place-content:
+    center;
+    height: 100vh;
+    color: var(--bs-white);">
+    <h1
+        class="text-center display-1"
+        style="margin-bottom: 1.5rem"
+    >
+        Image Scraper
+    </h1>
+
+    <form action="/images" method="post">
+        <div class="input-group mb-3">
+            <input
+                type="text"
+                class="form-control"
+                id="query"
+                name="query"
+                placeholder="Enter Keyword for Images..."
+            >
+            <button
+                class="btn btn-primary"
+                type="submit"
+                style="background-color: var(--bs-gray-dark)"
+            >Search</button>
+        </div>
+    </form>
+</div>
+{% include "footer.html" %}
