@@ -27,3 +27,12 @@ pipenv install
 ```commandline
 py main.py
 ```
+
+## Preview
+
+1. **Home Screen**
+![Home Screen](./readmeAssets/ss_1.png)
+   
+
+1. **Images Screen**
+![Home Screen](./readmeAssets/ss_2.png)
